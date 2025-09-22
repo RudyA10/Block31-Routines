@@ -1,3 +1,5 @@
+const API = "https://fitnesstrac-kr.herokuapp.com/api";
+
 export async function createSet(token, set) {
   if (!token) {
     throw Error("You must be signed in to add a set.");

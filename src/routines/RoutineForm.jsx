@@ -23,19 +23,19 @@ export default function ActivityForm({ syncRoutines }) {
 
   return (
     <>
-      <h2>Add a new activity</h2>
+      <h2>Add a new routine</h2>
       <form action={tryCreateRoutine}>
         <label>
           Name
           <input type="text" name="name" />
         </label>
         <label>
-          Description
-          <input type="text" goal="goal" />
+          Goal
+          <input type="text" name="goal" />
         </label>
         <button>Add routine</button>
+        {error && <p role="alert">{error}</p>}
       </form>
-      {error && <p role="alert">{error}</p>}
     </>
   );
 }
